@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="settings">
+            <h2>Генератор кнопок</h2>
+
+            <select size="1">
+                <option>Выберите элемент</option>
+                <option value="a">Ссылка</option>
+                <option value="button">Кнопка</option>
+            </select>
+
+            <input type="text" id="text_elem" placeholder="Изменить текст элемента">
+
+            <fieldset class="palett">
+                <legend>Палитра</legend>
+                <div class="color_scheme">
+                    <h3>Цветовая схема</h3>
+                    <div class="change_color">
+                        <input type="radio" name="color_type" id="change_prim" value="primary" checked>
+                        <input type="color" id="primary" name="primary" value="#2020DF">
+                        <label for="primary">Первичный</label>
+                    </div>
+
+                    <div class="change_color">
+                        <input type="radio" name="color_type" id="change_cta" value="cta">
+                        <input type="color" id="cta" name="cta" value="#DF2020">
+                        <label for="cta">Акцентирующий</label>
+
+                    </div>
+                    <div class="change_color">
+                        <input type="radio" name="color_type" id="change_sec" value="secondary">
+                        <input type="color" id="secondary" name="secondary" value="#9779D2">
+                        <label for="secondary">Вторичный</label>
+
+                    </div>
+                </div>
+                <div class="filling">
+                    <h3>Заливка</h3>
+                    <div class="change_filling">
+                        <input type="radio" name='filling' id="change_rest" value="rect" checked>
+                        <label for="change_rest">Сплошная</label>
+                    </div>
+                    <div class="change_filling">
+                        <input type="radio" name='filling' id="change_white" value="white">
+                        <label for="change_white">Белая</label>
+                    </div>
+
+                    <h3>Градиенты</h3>
+                    <div >
+                        <input type="checkbox" id="change_gradient" value="gradient">
+                        <label for="change_gradient">Градиентная</label>
+                        <span class="gradient_pair">
+                            <input type="color" id="color_one" name="color_one" value="#FFFFFF">
+                            <input type="color" id="color_two" name="color_two" value="#FFFFFF">
+                        </span>
+                    </div>
+                </div>
+
+                
+            </fieldset>
+
+            
+
+            <fieldset id="size_element">
+                <legend>Размер элемента</legend>
+                <input type="radio" name="size_elem" id="desctop_size" value="desctop" checked>
+                <label for="big_elem">Крупные</label>
+
+                <input type="radio" name="size_elem" id="mobile_size" value="mobile">
+                <label for="small_elem">Мелкие</label>
+            </fieldset>
+
+            <div id="decoration">
+
+                <fieldset class="check_list">
+                    <legend>Дополнительно</legend>
+                    <div>
+                        <input id="accent_border" type="checkbox">
+                        <label for="accent_border">Акцентирование</label>
+                    </div>
+                    <div>
+                        <input id="rant" type="checkbox">
+                        <label for="rant">Скругление</label>
+                    </div>
+                    <div>
+                        <input id="punktir" type="checkbox">
+                        <label for="punktir">Пунктир</label>
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="ico_list" title="Мини иконки">
+                    <legend>Картинки</legend>
+                    <input type="checkbox" id="add_ico" value="add_ico">
+                    <label for="add_ico">Добавить иконку</label>
+
+                    <ul class="ico_list">
+                        <li><input type="radio" id="change_book" value="book">
+                            <img class="ico book" src="src/book-prim.svg" alt="Книга">
+                        </li>
+
+                        <li><input type="radio" id="change_cart" value="cart">
+                            <img class="ico cart" src="../src/cart-prim.svg" alt="Тележка">
+                        </li>
+
+                        <li><input type="radio" id="change_arrow" value="arrow">
+                            <img class="ico arrow" src="src/arrow-prim.svg" alt="Стрелка">
+                        </li>
+
+                </fieldset>
+
+            </div>
+
+        </section>
+
+        <section class="showing">
+            <h2>Предварительный посмотр</h2>
+            <div class="area_show"> </div>
+
+        </section>
+    </div>
+
+    <script src="/JS/script.js"></script>
+</body>
+
+</html>

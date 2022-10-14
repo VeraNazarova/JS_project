@@ -1,0 +1,154 @@
+:root {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    --primary_color: #2020DF;
+    --cta_color: #DF2020;
+    --secondary: #9779D2;
+}
+body {
+    max-width: 1920px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section {
+    margin: 20px;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    margin: 10px;
+
+    text-align: start;
+    
+    font-weight: normal;
+}
+
+.settings {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.palett {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.change_color{
+    display: block;
+
+}
+
+.change_filling label,
+.change_color label {
+    padding-left: 20px;
+}
+
+.change_color [type='radio'] {
+    align-self: center;
+}
+
+#text_elem {
+    margin: 20px 0px;
+    display: block;
+}
+
+#decoration {
+    display: flex;
+    flex-direction: column;
+}
+
+.check_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.ico_list li {
+    padding-left: 20px;
+}
+
+.showing {
+    width: 40%;
+    
+}
+.area_show {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+a.primary {
+    color: var(--primary_color);
+}
+
+a.cta {
+    color: var(--cta_color);
+}
+
+a.secondary {
+    color: var(--secondary);
+}
+
+button.rect {
+    border: none;
+    color: #FFFFFF;
+}
+
+button.primary{
+    background-color: var(--primary_color);
+}
+
+button.cta{
+    background-color: var(--cta_color);
+}
+
+button.secondary {
+    background-color: var(--secondary);
+}
+
+button.white {
+    background-color: #FFFFFF;
+    border: 2px solid;
+}
+
+button.primary.white {
+    color: var(--primary_color);
+    border-color: var(--primary_color);
+}
+
+button.cta.white {
+    color: var(--cta_color);
+    border-color: var(--cta_color);
+}
+
+button.secondary.white {
+    color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+button.mobile {
+    padding: 8px 18px;
+}
+
+button.desctop {
+    padding: 10px 24px;
+    font-size: 1.14rem;
+}
