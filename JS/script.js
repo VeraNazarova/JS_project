@@ -24,6 +24,12 @@ const sizes = document.querySelectorAll('input[name="size_elem"]');
 //Активный радио-баттон выбора размера
 let change_size = document.querySelector('input[name="size_elem"]:checked');
 
+//Дополнительные настройки - пунктирное подчеркивание ссылок
+const punktir = document.getElementById("punktir");
+
+//Дополнительные настройки - скругление
+const bord_radius = document.getElementById("rant");
+
 
 //Событие селектора кнопка/ссылка
 select_type.addEventListener("change", () => {
@@ -66,12 +72,48 @@ function creatObject(tag, color, color_filling, size) {
         }
     }
     new_elem.classList.add(color);
-    new_elem.classList.add(color_filling);
     new_elem.classList.add(size);
-    console.log(new_elem);
+
     return new_elem;
+   
 }
 
+//Скрывает настройки, неотносящиеся к выбранному тегу
+function setPresets (tag) {
+    let arr_blocked=[];
+    let arr_unblocked=[];
+
+    let rant_group=document.getElementById('rant_group');
+    let punktir_group=document.getElementById('punktir_group');
+    let filling_group = document.getElementById('filling_group');
+
+    if (tag=='button') {
+        arr_blocked.push(punktir_group);
+
+        arr_unblocked.push(rant_group);
+        arr_unblocked.push(filling_group);
+    }
+
+    else if (tag=='a')
+        {
+            arr_blocked.push(rant_group);
+            arr_blocked.push(filling_group);
+
+            arr_unblocked.push(punktir_group);
+        }
+
+    arr_blocked.forEach(element => element.classList.add('blocked'));
+    arr_unblocked.forEach(element => element.classList.remove('blocked'));
+}
+
+//Событие изменения имени
+text_elem.addEventListener('change', () => {
+    console.log(text_elem.value);
+    text_elem.textContent=text_elem.value;
+
+    if (area_show.childElementCount)
+        elem.textContent = text_elem.value;
+})
 
 //обработка события смены цветовой схемы
 for (let radio of change_color) {
@@ -153,4 +195,6 @@ for(let radio of sizes)
         }
     })
 }
+
+
 

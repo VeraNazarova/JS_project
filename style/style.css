@@ -95,6 +95,14 @@ h3 {
     text-align: center;
 }
 
+ a {
+    text-decoration: underline;
+} 
+
+a .dashed {
+    text-decoration-style: dashed;
+}
+
 a.primary {
     color: var(--primary_color);
 }
